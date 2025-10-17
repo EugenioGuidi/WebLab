@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="it">
+    <head>
+        <title>Tabella accessibile</title>
+        <style>
+            table, th, td {
+                border: solid black 1px;
+            }
+        </style>
+    </head>
+    <body>
+        <section>
+            <table>
+                <thead>
+                    <tr>
+                        <th></th>
+                        <th id="lun" colspan="2" scope="colgroup">Lunedì</th>
+                        <th id="mar" colspan="2" scope="colgroup">Martedì</th>
+                    </tr>
+                    <tr>
+                        <th></th>
+                        <th id="aula2.1_lun" headers="lun" scope="col">Aula 2.1</th>
+                        <th id="lab2.2_lun" headers="lun" scope="col">Laboratio 2.2</th>
+                        <th id="aula2.1_mar" headers="mar" scope="col">Aula 2.1</th>
+                        <th id="lab2.2_mar" headers="mar" scope="col">Laboratorio 2.2</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <th id="9_10" scope="row">9-10</th>
+                        <td rowspan="2" headers="aula2.1_lun lun 9_10 10_11">Sistemi multimediali</td>
+                        <td headers="lun lab2.2_lun 9_10">Programmazione</td>
+                        <td headers="mar aula2.1_mar 9_10">Analisi</td>
+                        <td rowspan="3" headers="mar lab2.2_mar 9_10 10_11 11_12">Sistemi Multimediali</td>
+                    </tr>
+                    <tr>
+                        <th id="10_11" scope="row">10-11</th>
+                        <td rowspan="2" headers="lun lab2.2_lun 10_11 11_12">Tecnologie Web</td>
+                        <td headers="mar aula2.1_mar 10_11">Programmazione</td>
+                    </tr>
+                    <tr>
+                        <th id="11_12" scope="row">11-12</th>
+                        <td headers="lun aula2.1_lun 11_12">Algebra</td>
+                        <td headers="mar aula2.1_mar 11_12"> Fisica</td>
+                    </tr>
+                </tbody>
+            </table>
+        </section>
+    </body>
+</html>

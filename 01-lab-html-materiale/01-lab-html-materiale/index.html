@@ -3,48 +3,61 @@
 <head>
     <title>Home | Blog di Tecnologie Web</title>
     <style>
-        img{width: 50%;}
+        img{width: 100px;}
     </style>
 </head>
 <body>
+    <!--tag specifico per l'intestazione-->
     <header>
         <h1>Blog di Tecnologie Web</h1>
     </header>
+
+    <!--tag specifico per il menu nav = navigation-->
     <nav>
         <ul>
-            <li><a href="#">Home</a></li>
-            <li><a href="#">Archivio</a></li>
-            <li><a href="#">Contatti</a></li>
-            <li><a href="#">Login</a></li>
+            <!--in tag a il # serve per dire che il link non punta ad un risorsa esterna ma va in cima alla pagina, serve per la fase di sviluppo-->
+            <li><a href="index.html">Home</a></li>
+            <li><a href="archivio.html">Archivio</a></li>
+            <li><a href="contatti.html">Contatti</a></li>
+            <li><a href="login.html">Login</a></li>
         </ul>
     </nav>
+
+    <!--è buona norma avere main per il contenuto principale-->
     <main>
         <h2>Ultimi Articoli</h2>
         <article>
+            <!--per le immagini meglio un percorso relativo, in questo caso si lascia alt vuoto perchè non da informazioni utili-->
             <img src="./img/html5-js-css3.png" alt="">
             <h3>Intro alle Tecnologie Web Client Side</h3>
+            <!--in questo articolo c'è una data e un nome, possiamo usare il tag p in questo caso, paragrafo-->
             <p>3 Ottobre 2025 - Gino Pino</p>
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ex iure, totam unde, nobis mollitia similique dolorum accusantium culpa nemo corporis eos, quaerat deleniti asperiores quas voluptatibus sit saepe doloribus ipsum!</p>
+            <!--per simulare l'occupazione di spazio del testo si usa "Lorem ipsum"-->
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Magni ipsa quo quia voluptatum assumenda reprehenderit laboriosam possimus vitae eveniet dolorem expedita consequatur, autem iure, ex labore fugiat quibusdam necessitatibus voluptate.</p>
+            <!--qui essendo che il bottone che si vede in realtà ti porta da un'altra parte si usa il tag a-->
             <a href="#">Leggi tutto</a>
         </article>
         <article>
             <img src="./img/php.png" alt="">
             <h3>Intro alle Tecnologie Web Server Side</h3>
             <p>3 Ottobre 2025 - Cippa Lippa</p>
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ex iure, totam unde, nobis mollitia similique dolorum accusantium culpa nemo corporis eos, quaerat deleniti asperiores quas voluptatibus sit saepe doloribus ipsum!</p>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Magni ipsa quo quia voluptatum assumenda reprehenderit laboriosam possimus vitae eveniet dolorem expedita consequatur, autem iure, ex labore fugiat quibusdam necessitatibus voluptate.</p>
             <a href="#">Leggi tutto</a>
         </article>
     </main>
+
+    <!--tag per Post Popolari e Categorie, roba non principale ma di contorno-->
     <aside>
+        <!--in questo caso usiamo section per dividere Post Popolari da Categorie, section è un contenitore generico non serve per dividere semanticamente le info-->
         <section>
             <h2>Post Popolari</h2>
             <ul>
                 <li>
-                    <img src="./img/html5-js-css3.png" alt="" />
+                    <img src="./img/html5-js-css3.png" alt="">
                     <a href="#">Intro alle Tecnologie Web Client Side</a>
                 </li>
                 <li>
-                    <img src="./img/php.png" alt="" />
+                    <img src="./img/php.png" alt="">
                     <a href="#">Intro alle Tecnologie Web Server Side</a>
                 </li>
             </ul>
@@ -61,8 +74,11 @@
             </ul>
         </section>
     </aside>
+
+    <!--tag per indicare il piè di pagina-->
     <footer>
         <p>Tecnologie Web - A.A. 2025/2026</p>
     </footer>
 </body>
+
 </html>

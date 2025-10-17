@@ -1,23 +1,25 @@
 <!DOCTYPE html>
 <html lang="it">
 <head>
-    <title>Home | Blog di Tecnologie Web</title>
+    <title>Contatti | Blog di Tecnologie Web</title>
     <style>
-        img{width: 50%;}
+        img{width: 100px;}
     </style>
 </head>
 <body>
     <header>
         <h1>Blog di Tecnologie Web</h1>
     </header>
+
     <nav>
         <ul>
-            <li><a href="#">Home</a></li>
-            <li><a href="#">Archivio</a></li>
-            <li><a href="#">Contatti</a></li>
-            <li><a href="#">Login</a></li>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="archivio.html">Archivio</a></li>
+            <li><a href="contatti.html">Contatti</a></li>
+            <li><a href="login.html">Login</a></li>
         </ul>
     </nav>
+
     <main>
         <h2>Autori del Blog</h2>
         <table>
@@ -28,7 +30,7 @@
             </tr>
             <tr>
                 <th id="ginopino">Gino Pino</th>
-                <td headers="ginopino email">ginopino@blgtw.com</td>
+                <td headers="ginopino email">ginopino@blogtw.com</td>
                 <td headers="ginopino argomenti">HTML, CSS, JS</td>
             </tr>
             <tr>
@@ -38,16 +40,18 @@
             </tr>
         </table>
     </main>
+
     <aside>
+        <!--in questo caso usiamo section per dividere Post Popolari da Categorie, section è un contenitore generico non serve per dividere semanticamente le info-->
         <section>
             <h2>Post Popolari</h2>
             <ul>
                 <li>
-                    <img src="./img/html5-js-css3.png" alt="" />
+                    <img src="./img/html5-js-css3.png" alt="">
                     <a href="#">Intro alle Tecnologie Web Client Side</a>
                 </li>
                 <li>
-                    <img src="./img/php.png" alt="" />
+                    <img src="./img/php.png" alt="">
                     <a href="#">Intro alle Tecnologie Web Server Side</a>
                 </li>
             </ul>
@@ -64,8 +68,11 @@
             </ul>
         </section>
     </aside>
+
+    <!--tag per indicare il piè di pagina-->
     <footer>
         <p>Tecnologie Web - A.A. 2025/2026</p>
     </footer>
 </body>
+
 </html>
