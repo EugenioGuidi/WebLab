@@ -1,16 +1,14 @@
-aside img{width: 50px;}
+body{
+    background-color: #e4e4e4;
+}
 
 body, h1, ul{
     margin: 0;
     padding: 0;
 }
 
-body{
-    background-color: #e4e4e4;
-}
-
 body > header{
-    background-color: rgb(54,54,54);
+    background-color: rgb(54, 54, 54);
     color: #fff;
     text-align: center;
     font-family: 'Courier New', Courier, monospace;
@@ -21,33 +19,37 @@ nav{
     margin: 0 5%;
 }
 
-nav ul, aside > section > ul{
+nav ul, aside ul{
+    /*list-style: none; lo usa per rimuovere i pallini della lista puntata*/
     list-style: none;
 }
 
 nav ul li{
     display: inline-block;
     width: 45%;
-    background-color: rgb(54,54,54);
+    background-color: rgb(54, 54, 54);
     text-align: center;
     margin-top: 10px;
 }
 
 nav ul li:nth-child(odd){
-    margin-right: 9%;
+    margin-right: 10%;
 }
 
 nav ul li a{
+    /*qui si è messa la riga display: inline-block; per far si che il click venga preso su tutto l'li che contiene l'a, perchè normalmente a sarebbe un elemento inline e non accetterebbe width e height*/
     display: inline-block;
     width: 100%;
     height: 100%;
-    padding: 5px 0;
-    color: #fff;
+    padding: 5px;
     font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    color: #fff;
+    /*con text-decoration ho rimosso la sottolineatura*/
     text-decoration: none;
 }
 
-nav ul li a:hover, main > article > a:hover{
+nav ul li a:hover, main > article > a:hover, aside > section > ul > li > a:hover{
+    /*questo serve per far si che quando si passa il cursore sopra l'li la scritta in a si colora del colore che voglio io*/
     color: rgb(219, 69, 83);
 }
 
@@ -62,10 +64,12 @@ main > h2{
 
 main > article{
     background-color: #fff;
+    /*solid sta per linea piena continua*/
     border: 1px solid #cacaca;
+    /*text-aline: center; cosi mi mette le immagini al centro*/
+    text-align: center;
     margin-bottom: 20px;
     padding: 0 5% 20px;
-    text-align: center;
 }
 
 main > article > img{
@@ -82,23 +86,25 @@ main > article > p{
     font-size: 12px;
 }
 
+/*la pseudo classe nth-of-type serve per dire prendi l'n-esimo figlio di quel tipo, in questo caso il tipo p*/
 main > article > p:nth-of-type(2){
     font-family: Verdana, Geneva, Tahoma, sans-serif;
 }
 
 main > article > a{
-    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    color: #000;
     text-decoration: none;
     background-color: #e4e4e4;
-    color: #000;
-    padding: 5px 10px;
+    /*border radius serve per dare curvatura agli angoli, il numero in pixel indica il raggio*/
     border-radius: 5px;
+    padding: 5px 10px;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
 }
 
 aside{
+    background-color: #fff;
     margin: 0 5%;
     border: 1px solid #cacaca;
-    background-color: #fff;
     font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
 }
 
@@ -111,15 +117,14 @@ aside > section > h2{
 }
 
 aside > section > ul > li{
-    margin-bottom: 20px;
+    margin-bottom: 10px;
 }
 
-aside > section > ul > li > img{
-    width: 50px;
+aside section > ul > li > img{
     float: left;
+    width: 50px;
 }
 
 aside > section > ul > li > a{
     text-decoration: none;
-    font-weight: bold;
 }
